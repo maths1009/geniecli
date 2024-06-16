@@ -1,9 +1,13 @@
 {
   "name": "geniecli",
+  "type": "module",
   "version": "1.0.0",
   "description": "Geniecli is a personal CLI tool designed to save time when setting up new React, Vue, or Express projects. It creates a complete project structure, including a README, .gitignore, and predefined environment variables, tailored to my usage. In the future, Geniecli may be opened to the public with more customization options for each technology.",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc && tsc-alias"
+  },
+  "bin": {
+    "create-project": "./bin/create-project.bat"
   },
   "author": "Tisma",
   "license": "ISC",
@@ -12,12 +16,13 @@
     "url": "https://gitlab.com/cli2761324/geniecli"
   },
   "dependencies": {
-    "@types/node": "^20.14.2",
     "commander": "^12.1.0",
-    "inquirer": "^9.2.23",
-    "typescript": "^5.4.5"
+    "inquirer": "^9.2.23"
   },
   "devDependencies": {
-    "@types/inquirer": "^9.0.7"
+    "@types/inquirer": "^9.0.7",
+    "@types/node": "^20.14.2",
+    "tsc-alias": "^1.8.10",
+    "typescript": "^5.4.5"
   }
 }
