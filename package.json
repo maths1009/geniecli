@@ -10,5 +10,11 @@
   "repository": {
     "type": "git",
     "url": "https://gitlab.com/cli2761324/geniecli"
+  },
+  "dependencies": {
+    "@types/node": "^20.14.2",
+    "commander": "^12.1.0",
+    "inquirer": "^9.2.23",
+    "typescript": "^5.4.5"
   }
 }
