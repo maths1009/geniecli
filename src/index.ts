@@ -5,13 +5,14 @@ import { promptUser } from "./utils/promptUser";
 import { copyTemplateFiles, copyCommonFiles } from "./utils/copyFile";
 import { getCurrentDir } from "./utils/getCurrentDir";
 import { envVars } from "./constants";
+import packageJSON from "../package.json";
 
 const currentDir = getCurrentDir(import.meta.url);
 
 const program = new Command();
 
 program
-  .version("1.0.0")
+  .version(packageJSON.version)
   .description("CLI pour créer des projets React, Vue ou Express API")
   .action(async () => {
     const { projectName, projectType } = await promptUser();
