@@ -28,6 +28,10 @@ export const copyFiles = (
             .map(([key, value]) => `${key}=${value}`)
             .join("\n");
           break;
+        case file === ".gitignore-template":
+          fs.copyFileSync(origFilePath, writePath);
+          fs.renameSync(writePath, path.join(destinationDir, ".gitignore"));
+          return;
         default:
           break;
       }

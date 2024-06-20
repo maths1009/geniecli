@@ -1,0 +1,154 @@
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Dependency directories
+node_modules/
+jspm_packages/
+bower_components/
+
+# Compiled binary addons (http://nodejs.org/api/addons.html)
+build/Release/
+.build/
+
+# Coverage directories
+coverage/
+*.lcov
+.nyc_output/
+
+# Grunt intermediate storage
+.grunt/
+
+# Typescript declaration files
+typings/
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Optional REPL history
+.node_repl_history
+
+# Output of 'npm pack'
+*.tgz
+
+# Yarn Integrity file
+.yarn-integrity
+
+# dotenv environment variables files
+.env
+.env.*.local
+
+# Gatsby files
+.cache/
+public/
+
+# Next.js build output
+.next/
+
+# Nuxt.js build / generate output
+.nuxt/
+
+# VuePress build output
+.vuepress/dist
+
+# Serverless directories
+.serverless/
+
+# FuseBox
+.fusebox/
+
+# DynamoDB Local files
+.dynamodb/
+
+# TernJS port file
+.tern-port
+
+# Storybook build outputs
+.out/
+.storybook-out/
+
+# Vue.js local env files
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# React Native
+*.apk
+*.ap_
+*.ipa
+*.app.dSYM.zip
+*.app.dSYM
+.expo/
+.expo-shared/
+
+# Flutter/Dart/Pub related
+**/doc/api/
+.flutter-plugins
+.flutter-plugins-dependencies
+.dart_tool/
+.packages
+build/
+pubspec.lock
+
+# IDEs and editors
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+.history/
+*.swp
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Java
+*.class
+*.jar
+*.war
+*.ear
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.temp
+
+# Webpack output
+dist/
+
+# Docker
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+# SQLite
+*.sqlite3
+
+# Debugger
+.ionide/
+
+# Custom logs
+*.log
