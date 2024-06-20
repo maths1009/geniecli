@@ -2,9 +2,8 @@ import { Command } from "commander";
 import path from "path";
 import fs from "fs";
 import { promptUser } from "./utils/promptUser";
-import { copyTemplateFiles, copyCommonFiles } from "./utils/copyFile";
+import { copyFiles } from "./utils/copyFile";
 import { getCurrentDir } from "./utils/getCurrentDir";
-import { envVars } from "./constants";
 import packageJSON from "../package.json";
 
 const currentDir = getCurrentDir(import.meta.url);
@@ -34,9 +33,8 @@ program
     }
 
     fs.mkdirSync(projectDir);
-
-    copyTemplateFiles(templateDir, projectDir);
-    copyCommonFiles(commonDir, projectDir, projectName, envVars[projectType]);
+    copyFiles(templateDir, projectDir);
+    copyFiles(commonDir, projectDir, { projectName });
     console.log(`Projet ${projectType} créé avec succès dans ${projectDir}`);
   });
 
