@@ -5,6 +5,7 @@ import { promptUser } from "./utils/promptUser";
 import { copyFiles } from "./utils/copyFile";
 import { getCurrentDir } from "./utils/getCurrentDir";
 import packageJSON from "../package.json";
+import { envVars } from "./constants";
 
 const currentDir = getCurrentDir(import.meta.url);
 
@@ -34,7 +35,10 @@ program
 
     fs.mkdirSync(projectDir);
     copyFiles(templateDir, projectDir);
-    copyFiles(commonDir, projectDir, { projectName });
+    copyFiles(commonDir, projectDir, {
+      projectName,
+      envVars: envVars[projectType],
+    });
     console.log(`Projet ${projectType} créé avec succès dans ${projectDir}`);
   });
 

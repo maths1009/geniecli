@@ -3,6 +3,7 @@ import path from "path";
 
 interface CopyOptions {
   projectName?: string;
+  envVars?: Record<string, string>;
 }
 
 export const copyFiles = (
@@ -21,6 +22,11 @@ export const copyFiles = (
       switch (true) {
         case options.projectName && file === "README.md":
           contents = contents.replace("${projectName}", options.projectName);
+          break;
+        case options.envVars && (file === ".env" || file === ".env-sample"):
+          contents = Object.entries(options.envVars)
+            .map(([key, value]) => `${key}=${value}`)
+            .join("\n");
           break;
         default:
           break;
