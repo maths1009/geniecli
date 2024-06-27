@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "CommonJS",
+    "outDir": "./dist",
+    "strict": true,
+    "esModuleInterop": true,
+    "rootDir": "./src",
+    "baseUrl": "./src",
+    "paths": {
+      "@routes/*": ["routes/*"],
+      "@utils/*": ["utils/*"],
+      "@middlewares/*": ["middlewares/*"],
+      "@type/*": ["types/*"],
+      "@/*": ["./*"]
+    }
+  },
+  "include": ["src/**/*"],
+  "ts-node": {
+    "require": ["tsconfig-paths/register"]
+  }
+}

@@ -4,7 +4,7 @@ import fs from "fs";
 import { promptUser } from "./utils/promptUser";
 import { copyFiles } from "./utils/copyFile";
 import { getCurrentDir } from "./utils/getCurrentDir";
-import packageJSON from "../package.json";
+import packageJSON from "../package.json" assert { type: "json" };
 import { envVars } from "./constants";
 
 const currentDir = getCurrentDir(import.meta.url);

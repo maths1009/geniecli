@@ -23,7 +23,8 @@ export const copyFiles = (
         case options.projectName && file === "README.md":
           contents = contents.replace("${projectName}", options.projectName);
           break;
-        case options.envVars && (file === ".env" || file === ".env-sample"):
+        case options.envVars &&
+          [".env", ".env-sample", ".env.test"].includes(file):
           contents = Object.entries(options.envVars)
             .map(([key, value]) => `${key}=${value}`)
             .join("\n");
