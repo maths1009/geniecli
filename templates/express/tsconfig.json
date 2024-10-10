@@ -1,22 +1,20 @@
 {
-  "compilerOptions": {
-    "target": "es6",
-    "module": "CommonJS",
-    "outDir": "./dist",
-    "strict": true,
-    "esModuleInterop": true,
-    "rootDir": "./src",
-    "baseUrl": "./src",
-    "paths": {
-      "@routes/*": ["routes/*"],
-      "@utils/*": ["utils/*"],
-      "@middlewares/*": ["middlewares/*"],
-      "@type/*": ["types/*"],
-      "@/*": ["./*"]
-    }
-  },
-  "include": ["src/**/*"],
-  "ts-node": {
-    "require": ["tsconfig-paths/register"]
-  }
+	"compilerOptions": {
+		"target": "ESNext",
+		"module": "CommonJS",
+		"baseUrl": ".",
+		"paths": {
+			"@/*": ["src/*"]
+		},
+		"moduleResolution": "Node",
+		"outDir": "dist",
+		"importsNotUsedAsValues": "remove",
+		"strict": true,
+		"esModuleInterop": true,
+		"skipLibCheck": true,
+		"forceConsistentCasingInFileNames": true,
+		"types": ["vitest/globals"]
+	},
+	"include": ["src/**/*"],
+	"exclude": ["node_modules"]
 }
